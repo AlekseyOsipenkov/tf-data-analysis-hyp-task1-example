@@ -22,8 +22,6 @@ samples = np.array([sample_size_a, sample_size_b])
 
 stat, p_value = proportions_ztest(count=successes, nobs=samples)
 
-print('z_stat: %0.3f, p_value: %0.10f' % (stat, p_value))
-
  if p_value > significance:
    return False
 else:
