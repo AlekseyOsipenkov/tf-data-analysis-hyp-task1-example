@@ -19,7 +19,7 @@ def solution(x_success: int,
 
     successes = np.array([sample_success_a, sample_success_b])
     samples = np.array([sample_size_a, sample_size_b])
-
+    
     stat, p_value = proportions_ztest(count=successes, nobs=samples)
 
     if p_value > significance:
