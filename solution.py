@@ -22,7 +22,7 @@ def solution(x_success: int,
 
     stat, p_value = proportions_ztest(count=successes, nobs=samples)
 
-     if p_value > significance:
+    if p_value > significance:
          return False
     else:
          return True
