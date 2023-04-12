@@ -12,18 +12,18 @@ def solution(x_success: int,
     # Это будет вашим решением
     # Не меняйте название функции и её аргументы
    
-significance = 0.07
+    significance = 0.07
 
-sample_success_a, sample_size_a = (x_success, x_cnt)
-sample_success_b, sample_size_b = (y_success, y_cnt)
+    sample_success_a, sample_size_a = (x_success, x_cnt)
+    sample_success_b, sample_size_b = (y_success, y_cnt)
 
-successes = np.array([sample_success_a, sample_success_b])
-samples = np.array([sample_size_a, sample_size_b])
+    successes = np.array([sample_success_a, sample_success_b])
+    samples = np.array([sample_size_a, sample_size_b])
 
-stat, p_value = proportions_ztest(count=successes, nobs=samples)
+    stat, p_value = proportions_ztest(count=successes, nobs=samples)
 
- if p_value > significance:
-   return False
-else:
-  return True
+     if p_value > significance:
+         return False
+    else:
+         return True
    
